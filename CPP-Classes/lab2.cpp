@@ -26,8 +26,8 @@ void lab2()
 	cin >> u1 >> u2;
 	cout << u1 << u2 << endl;
 
-	// Fraction u4(8, -10);
-	// cout << u4;
+	Fraction u4(8, -10);
+	cout << u4;
 
 	cout << endl;
 	
