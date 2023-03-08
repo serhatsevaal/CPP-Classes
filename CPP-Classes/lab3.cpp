@@ -3,7 +3,7 @@ using namespace std;
 #include "Date.h"
 
 
-int main()
+void lab3()
 {
 	cout << "----------   Part 1    -------------------------" << endl<<endl;
 	
