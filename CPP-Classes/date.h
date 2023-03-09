@@ -5,11 +5,18 @@ using namespace std;
 
 class Date
 {
+public:
+    enum class Format {
+            NUMERICAL,
+            CHAR_MONTH,
+        };
+    
+private:
 	int day = 9;
 	int month = 3;
 	int year = 2021;
 
-	bool format;
+	Format format;
 
 	bool ifLeep() const;
 
@@ -22,12 +29,12 @@ public:
 	void SelectedDay(int days = 7);
 	bool isEqual(const Date& date);
 	friend bool isLess(const Date& date1, const Date& date2);
-	void SetFormat(bool format);
+	void SetFormat(Date::Format format);
 
 	friend ostream& operator<<(ostream& out, Date date) ;
-	friend istream& operator>>(istream& in, Date date);
+	friend istream& operator>>(istream& in, Date& date);
 	friend int NumberOfDays(Date d1, Date d2);
-
+    friend bool checkDate(Date date);
 };
 
 int NumberOfDays(Date d1, Date d2);
